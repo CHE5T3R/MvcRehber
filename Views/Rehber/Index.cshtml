@@ -1,0 +1,49 @@
+﻿@model Rehber.Models.rehberModel.rehberIndexViewModel
+
+@{
+    ViewData["Title"] = "Rehber";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <tr>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Telefon Numarası</th>
+        @* <th>E-mail</th>
+            <th>Adres</th>
+            <th>Şehir</th> *@
+        <th>İşlemler</th>
+    </tr>
+    @foreach (var rehber in Model.rehbers)
+    {
+
+        <tr>
+            <td>@rehber.name</td>
+            <td>@rehber.surname</td>
+            <td>@rehber.phoneNumber</td>
+            @* <td>@rehber.email</td>
+                <td>@rehber.adres</td>
+                <td>@rehber.sehir.sehirName</td> *@
+            <td>
+                @Html.ActionLink("Güncelle", "Güncelle", new { Id = rehber.Id }) |
+                @Html.ActionLink("Detaylar", "Detaylar", new { Id = rehber.Id }) |
+                @Html.ActionLink("Sil", "Sil", new { Id = rehber.Id }, new { onclick = "return confirm('Kayıt Silinsin mi?')" })
+            </td>
+            @*             <td><a href="/Rehber/Sil/@rehber.Id">Sil</a></td>*@
+        </tr>
+
+    }
+</table>
+<a href="Rehber/Ekle" class="btn btn-primary">Yeni kişi ekle</a>
+
+<a href="Rehber/ExportExcelList" class="btn btn-primary">Excel Listesini İndir</a>
+
+@* <button class="btn btn-primary" onclick="DownloadExcelRehberList">Excel Listesini İndir</button>
+
+    <script>
+        function DownloadRehberExcelList() {
+            wind.open("Rehber/Rehber/ExportExcelList");
+        }
+    </script> *@

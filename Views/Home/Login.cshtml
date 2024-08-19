@@ -1,0 +1,21 @@
+﻿@model MvcRehber2.Models.user
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewData["Title"]</h2>
+<form class="form-horizontal" method="post" action="~/Home/Login">
+    <div>
+        @Html.LabelFor(x => x.userName)
+        @Html.TextBoxFor(x => x.userName, null, new { @class = "form-control" })
+        @Html.LabelFor(x => x.password)
+        @Html.TextBoxFor(x => x.password, null, new { @class = "form-control", Type = "password" })
+
+        <input type="submit" class="btn btn-primary" value="Giriş Yap" />
+    </div>
+</form>
+<div>
+    <label>Hesabınız yok mu?</label>
+    <a href="SignUp" class="btn btn-primary">Kaydol</a>
+</div>

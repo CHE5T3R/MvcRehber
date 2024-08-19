@@ -1,0 +1,42 @@
+﻿@model Rehber.Models.rehberModel.rehberEkleViewModel
+
+@{
+    ViewData["Title"] = "Ekle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+<hr />
+
+<form class="form-horizontal" method="post" action="~/Rehber/Ekle">
+    
+    <div class="form-group">
+        @*<label>Name</label>
+            <input type="text" class= "form-control" name="name"/>
+            @Html.Label("Name")
+            @Html.TextBox("name", null, new { @class = "Form-control" }) *@
+        @Html.LabelFor(x => x.rehber.name)
+        @Html.TextBoxFor(x => x.rehber.name, null, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.rehber.surname)
+        @Html.TextBoxFor(x => x.rehber.surname, null, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.rehber.phoneNumber)
+        @Html.TextBoxFor(x => x.rehber.phoneNumber, null, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.rehber.email)
+        @Html.TextBoxFor(x => x.rehber.email, null, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.rehber.adres)
+        @Html.TextBoxFor(x => x.rehber.adres, null, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.rehber.sehirId)
+        @Html.DropDownListFor(x => x.rehber.sehirId, new SelectList(Model.sehirs, "Id", "sehirName"), new { @class = "form-control" })
+        <input type="submit" class="btn btn-primary" value="Kaydet" />
+    </div>
+</form>

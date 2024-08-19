@@ -1,0 +1,20 @@
+﻿@model Rehber.Models.rehberModel.rehberDetayViewModel
+@{
+    ViewData["Title"] = "Detaylar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.rehber.name @Model.rehber.surname Bilgileri</h2>
+
+<hr />
+
+<dl class=" horizontal">
+    <dt>@Html.DisplayNameFor(x => x.rehber.phoneNumber)</dt>
+    <dd>@Model.rehber.phoneNumber</dd>
+    <dt>@Html.DisplayNameFor(x => x.rehber.email)</dt>
+    <dd>@Model.rehber.email</dd>
+    <dt>@Html.DisplayNameFor(x => x.rehber.adres)</dt>
+    <dd>@Model.rehber.adres</dd>
+    <dt>@Html.DisplayNameFor(x => x.rehber.sehirId)</dt>
+    <dd>@Model.rehber.sehir.sehirName</dd>
+</dl>
