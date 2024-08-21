@@ -5,6 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <h1>@ViewData["Title"]</h1>
+<hr />
 
 <table class="table">
     <tr>
@@ -31,19 +32,18 @@
                 @Html.ActionLink("Detaylar", "Detaylar", new { Id = rehber.Id }) |
                 @Html.ActionLink("Sil", "Sil", new { Id = rehber.Id }, new { onclick = "return confirm('Kayıt Silinsin mi?')" })
             </td>
-            @*             <td><a href="/Rehber/Sil/@rehber.Id">Sil</a></td>*@
         </tr>
 
     }
 </table>
-<a href="Rehber/Ekle" class="btn btn-primary">Yeni kişi ekle</a>
+<a href="/Rehber/Ekle" class="btn btn-primary">Yeni kişi ekle</a>
 
-<a href="Rehber/ExportExcelList" class="btn btn-primary">Excel Listesini İndir</a>
+<a href="/ExportExcelList" class="btn btn-primary">Excel Listesini İndir</a>
 
 @* <button class="btn btn-primary" onclick="DownloadExcelRehberList">Excel Listesini İndir</button>
 
     <script>
         function DownloadRehberExcelList() {
-            wind.open("Rehber/Rehber/ExportExcelList");
+            wind.open("Rehber/ExportExcelList");
         }
     </script> *@

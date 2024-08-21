@@ -1,4 +1,6 @@
-﻿namespace Rehber.Models.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Rehber.Models.Entities
 {
     public class sehir
     {

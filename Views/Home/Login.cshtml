@@ -5,16 +5,21 @@
 }
 
 <h2>@ViewData["Title"]</h2>
+<hr />
+
 <form class="form-horizontal" method="post" action="~/Home/Login">
     <div>
         @Html.LabelFor(x => x.userName)
         @Html.TextBoxFor(x => x.userName, null, new { @class = "form-control" })
         @Html.LabelFor(x => x.password)
         @Html.TextBoxFor(x => x.password, null, new { @class = "form-control", Type = "password" })
-
+    </div>
+    <p/>
+    <div>
         <input type="submit" class="btn btn-primary" value="Giriş Yap" />
     </div>
 </form>
+<p />
 <div>
     <label>Hesabınız yok mu?</label>
     <a href="SignUp" class="btn btn-primary">Kaydol</a>

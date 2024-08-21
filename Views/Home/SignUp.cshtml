@@ -18,6 +18,12 @@
         @Html.LabelFor(x => x.password)
         @Html.TextBoxFor(x => x.password, null, new { @class = "form-control", Type = "password" })
     </div>
-    <input type="submit" class="btn btn-primary" value="Kaydet" />
-
+    <div class="form-group">
+        @Html.LabelFor(x => x.passwordControl)
+        @Html.TextBoxFor(x => x.passwordControl, null, new { @class = "form-control", Type = "password" })
+    </div>
+    <p />
+    <div>
+        <input type="submit" class="btn btn-primary" value="Kaydet" />
+    </div>
 </form>

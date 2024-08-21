@@ -222,6 +222,22 @@
     <Compile Include="Migrations\202408190714445_nulableUserId.Designer.cs">
       <DependentUpon>202408190714445_nulableUserId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202408191405027_phoneNumberMaxandEmail.cs" />
+    <Compile Include="Migrations\202408191405027_phoneNumberMaxandEmail.Designer.cs">
+      <DependentUpon>202408191405027_phoneNumberMaxandEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202408191419410_required.cs" />
+    <Compile Include="Migrations\202408191419410_required.Designer.cs">
+      <DependentUpon>202408191419410_required.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202408200647533_password2.cs" />
+    <Compile Include="Migrations\202408200647533_password2.Designer.cs">
+      <DependentUpon>202408200647533_password2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202408200650129_password2nullable.cs" />
+    <Compile Include="Migrations\202408200650129_password2nullable.Designer.cs">
+      <DependentUpon>202408200650129_password2nullable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Context\dbContext.cs" />
     <Compile Include="Models\Entities\rehber.cs" />
@@ -273,6 +289,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\Shared\_Layout.cshtml.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -334,6 +351,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202408190714445_nulableUserId.resx">
       <DependentUpon>202408190714445_nulableUserId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202408191405027_phoneNumberMaxandEmail.resx">
+      <DependentUpon>202408191405027_phoneNumberMaxandEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202408191419410_required.resx">
+      <DependentUpon>202408191419410_required.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202408200647533_password2.resx">
+      <DependentUpon>202408200647533_password2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202408200650129_password2nullable.resx">
+      <DependentUpon>202408200650129_password2nullable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
